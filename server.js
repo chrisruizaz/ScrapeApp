@@ -2,8 +2,11 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var MONGODB_URI =
-  process.env.MONGODB_URI || "mondob://localhost/mongoHeadlines";
-
+  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+console.log(
+  "-----------------------------------LookHere-------------------------------------------------"
+);
+console.log(MONGODB_URI);
 mongoose.connect(MONGODB_URI);
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
